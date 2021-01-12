@@ -244,6 +244,10 @@ $("#trash").droppable({
 });
 
 
+// add datepicker
+$("#modalDueDate").datepicker({
+  minDate: 1
+});
 
 
 
