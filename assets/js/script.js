@@ -47,19 +47,14 @@ var saveTasks = function() {
 };
 
 var auditTask = function(taskEl) {
-
   // get date from task element
   var date = $(taskEl)
     .find("span")
     .text()
     .trim();
 
-  console.log(date);
-
   // convert to moment object at 5:00pm
   var time = moment(date, "L").set("hour", 17);
-
-  console.log(time);
 
   // remove any old classes from element
   $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
@@ -67,8 +62,7 @@ var auditTask = function(taskEl) {
   // apply new class if task is near/over due date
   if (moment().isAfter(time)) {
     $(taskEl).addClass("list-group-item-danger");
-  } 
-  else if (Math.abs(moment().diff(time, "days")) <= 2) {
+  } else if (Math.abs(moment().diff(time, "days")) <= 2) {
     $(taskEl).addClass("list-group-item-warning");
   }
 };
@@ -122,9 +116,6 @@ $(".card .list-group").sortable({
     // update array on tasks object and save
     tasks[arrName] = tempArr;
     saveTasks();
-  },
-  stop: function(event) {
-    $(this).removeClass("dropover");
   }
 });
 
@@ -138,6 +129,7 @@ $("#trash").droppable({
     $(".bottom-trash").removeClass("bottom-trash-active");
   },
   over: function(event, ui) {
+    console.log(ui);
     $(".bottom-trash").addClass("bottom-trash-active");
   },
   out: function(event, ui) {
@@ -292,11 +284,10 @@ $("#remove-tasks").on("click", function() {
 // load tasks for the first time
 loadTasks();
 
-
-// timer function to recheck dates on tasks
+// audit task due dates every 30 minutes
 setInterval(function() {
-  $(".card .list-group-item").each(function(index, el) {
-    auditTask(el);
+  $(".card .list-group-item").each(function() {
+    auditTask($(this));
   });
 }, (1000 * 60) * 30);
 
