@@ -30,7 +30,7 @@ The user should clone the repository from GitHub and open up the project in the 
 This application will allow users to create tasks with descriptions and due dates. Users also are able to drag and drop tasks based on their process and can delete any task.
 Please view deployed application on [Taskmaster Pro.](https://tpgent01.github.io/taskmaster-pro/)
 
-![](website.gif)
+![](website)
 
 ## 📌Contributing
 Contributors should read the installation section.
