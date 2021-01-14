@@ -4,7 +4,6 @@
 This project is a task-management application using JavaScript and jQuery to manipulate the DOM. It also utilizes Bootstap as the CSS framework. Task data is persistent using localStorage.
 
 ## 📓Table of Contents
-(make these link to the sections in this README)
 * [Built With](#built-with)
 * [Installation](#installation)
 * [Usage](#usage)
