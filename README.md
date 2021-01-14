@@ -5,7 +5,7 @@ This project is a task-management application using JavaScript and jQuery to man
 
 ## Table of Contents
 (make these link to the sections in this README)
-* Installation
+* [Installation](#installation)
 * Usage
 * Contributing
 * Tests
