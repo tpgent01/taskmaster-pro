@@ -7,7 +7,7 @@ This project is a task-management application using JavaScript and jQuery to man
 (make these link to the sections in this README)
 * [Built With](#built-with)
 * [Installation](#installation)
-* [Usage] (#usage)
+* [Usage](#usage)
 * [Contributing](#contributing)
 * [Questions](#questions)
 
@@ -30,7 +30,7 @@ The user should clone the repository from GitHub and open up the project in the 
 This application will allow users to create tasks with descriptions and due dates. Users also are able to drag and drop tasks based on their process and can delete any task.
 Please view deployed application on [Taskmaster Pro.](https://tpgent01.github.io/taskmaster-pro/)
 
-![](website)
+![](website.gif)
 
 ## 📌Contributing
 Contributors should read the installation section.
